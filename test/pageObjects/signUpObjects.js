@@ -10,23 +10,12 @@ class SignUpPage {
         browser.url('/customer/account/create/');
     }
 
-    async signUp(firstName, lastName, email, password, passwordConfirmation) {
-        await this.firstNameInput.waitForExist();
+    signUp(firstName, lastName, email, password, passwordConfirmation) {
         this.firstNameInput.setValue(firstName);
-
-        await this.lastNameInput.waitForExist();
         this.lastNameInput.setValue(lastName);
-
-        await this.emailInput.waitForExist();
         this.emailInput.setValue(email);
-
-        await this.passwordInput.waitForExist();
         this.passwordInput.setValue(password);
-
-        await this.passwordConfirmationInput.waitForExist();
         this.passwordConfirmationInput.setValue(passwordConfirmation);
-
-        await this.signUpButton.waitForExist();
         this.signUpButton.click();
     }
 }
