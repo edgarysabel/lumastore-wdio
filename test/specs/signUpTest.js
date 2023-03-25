@@ -2,11 +2,10 @@ const { expect } = require('chai');
 const faker = require('faker');
 const generatePassword = require('../utils/passwordGenerator');
 const signUpObjects = require('../pageObjects/signUpObjects');
-const DashboardObjects = require('../pageObjects/DashboardObjects');
 
 describe('Sign-up Test', () => {
 
-    it('should register a new user', async () => {
+    it('Should register a new user', async () => {
 
         const firstName = faker.name.firstName();
         const lastName = faker.name.lastName();
@@ -17,6 +16,11 @@ describe('Sign-up Test', () => {
         signUpObjects.signUp(firstName, lastName, email, password, password);
 
         await signUpObjects.signUpButton.isExisting();
+        await signUpObjects.signUpButton.click();
+
+    });
+
+    it('Should successfully register a new user and redirect to the dashboard page', async () => {
 
         await browser.waitUntil(
             async () => (await browser.getUrl()).includes('/customer/account/'),
@@ -28,8 +32,6 @@ describe('Sign-up Test', () => {
 
         const currentUrl = await browser.getUrl();
         expect(currentUrl).to.include('/customer/account/');
-
-        await DashboardObjects.verifyRegistration.isExisting();
 
     });
 

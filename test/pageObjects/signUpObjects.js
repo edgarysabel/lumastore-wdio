@@ -1,13 +1,13 @@
 class SignUpPage {
-    get firstNameInput() { return $('input[name="firstname"]'); }
-    get lastNameInput() { return $('input[name="lastname"]'); }
-    get emailInput() { return $('input[name="email"]'); }
-    get passwordInput() { return $('input[name="password"]'); }
-    get passwordConfirmationInput() { return $('input[name="password_confirmation"]'); }
+    get firstNameInput() { return $('#firstname'); }
+    get lastNameInput() { return $('#lastname'); }
+    get emailInput() { return $('#email_address'); }
+    get passwordInput() { return $('#password'); }
+    get passwordConfirmationInput() { return $('#password-confirmation'); }
     get signUpButton() { return $('button[title="Create an Account"]'); }
 
     open() {
-        browser.url('https://magento.softwaretestingboard.com/customer/account/create/');
+        browser.url('/customer/account/create/');
     }
 
     signUp(firstName, lastName, email, password, passwordConfirmation) {
