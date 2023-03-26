@@ -23,6 +23,12 @@ class SignUpPage {
     return $('button[title="Create an Account"]');
   }
 
+  get welcomeMessage() {
+    return $(
+      '//div[contains(text(),"Thank you for registering with Main Website Store.")]'
+    );
+  }
+
   async open() {
     await browser.url("/customer/account/create/");
   }

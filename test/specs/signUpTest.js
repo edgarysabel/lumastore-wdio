@@ -14,10 +14,7 @@ describe("Sign-up Test", () => {
     await signUpObjects.signUp(firstName, lastName, email, password, password);
     await signUpObjects.signUpButton.click();
 
-    const welcomeMessage = await $(
-      "//div[contains(text(),'Thank you for registering with Main Website Store.')]"
-    );
-    expect(welcomeMessage).to.include(
+    expect(signUpObjects.welcomeMessage).to.include(
       "Thank you for registering with Main Website Store."
     );
   });
