@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 const faker = require("faker");
-const generatePassword = require("../utils/passwordGenerator");
+const generatePassword = require("../../utils/passwordGenerator");
 const signUpObjects = require("../pageObjects/signUpObjects");
 
 describe("Sign-up Test", () => {
