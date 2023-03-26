@@ -14,7 +14,6 @@ describe('Sign-up Test', () => {
 
         await signUpObjects.open();
         await signUpObjects.signUp(firstName, lastName, email, password, password);
-
         await signUpObjects.signUpButton.click();
 
     });

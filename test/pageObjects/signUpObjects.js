@@ -6,8 +6,8 @@ class SignUpPage {
     get passwordConfirmationInput() { return $('input[name="password_confirmation"]'); }
     get signUpButton() { return $('button[title="Create an Account"]'); }
 
-    open() {
-        browser.url('/customer/account/create/');
+    async open() {
+        await browser.url('/customer/account/create/');
     }
 
     signUp(firstName, lastName, email, password, passwordConfirmation) {
@@ -16,7 +16,6 @@ class SignUpPage {
         this.emailInput.setValue(email);
         this.passwordInput.setValue(password);
         this.passwordConfirmationInput.setValue(passwordConfirmation);
-        this.signUpButton.click();
     }
 }
 
