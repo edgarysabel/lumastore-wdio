@@ -12,8 +12,8 @@ describe('Sign-up Test', () => {
         const email = faker.internet.email();
         const password = generatePassword();
 
-        signUpObjects.open();
-        signUpObjects.signUp(firstName, lastName, email, password, password);
+        await signUpObjects.open();
+        await signUpObjects.signUp(firstName, lastName, email, password, password);
 
         await signUpObjects.signUpButton.isExisting();
         await signUpObjects.signUpButton.click();
