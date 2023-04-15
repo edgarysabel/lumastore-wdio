@@ -48,7 +48,11 @@ class SignUpPage {
   }
 
   get passwordFieldError() {
-    return $('div[id="email_address-error"]');
+    return $('div[id="password-error"]');
+  }
+
+  get passwordConfirmationFieldError() {
+    return $('div[id="password-confirmation-error"]');
   }
 
   async open() {
