@@ -28,7 +28,6 @@ describe("Sign-up Test", () => {
     expect(await signUpObjects.welcomeMessage.getText()).to.contain(
       "Thank you for registering with Main Website Store."
     );
-    await browser.pause(3000);
   });
 
   it("Should not allow submission with empty fields", async () => {
@@ -39,7 +38,6 @@ describe("Sign-up Test", () => {
     expect(await signUpObjects.emailFieldError).to.exist;
     expect(await signUpObjects.passwordFieldError).to.exist;
     expect(await signUpObjects.passwordConfirmationFieldError).to.exist;
-    await browser.pause(3000);
   });
 
   it("Should not allow submission with non-matching passwords", async () => {
@@ -55,7 +53,6 @@ describe("Sign-up Test", () => {
     );
     await signUpObjects.signUpButton.click();
 
-    await browser.pause(3000);
     expect(await signUpObjects.passwordMismatchError).to.exist;
     expect(await signUpObjects.passwordMismatchError.getText()).to.contain(
       "Please enter the same value again."
