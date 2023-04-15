@@ -55,16 +55,29 @@ class SignUpPage {
     return $('div[id="password-confirmation-error"]');
   }
 
+  get passwordMismatchError() {
+    return $('//div[contains(text(),"Please enter the same value again.")]');
+  }
+
   async open() {
     await browser.url("/customer/account/create/");
   }
 
-  async signUp(firstName, lastName, email, password) {
+  async signUp(
+    firstName,
+    lastName,
+    email,
+    password,
+    nonMatchingPassword = null
+  ) {
     await this.firstNameInput.setValue(firstName);
     await this.lastNameInput.setValue(lastName);
     await this.emailInput.setValue(email);
     await this.passwordInput.setValue(password);
-    await this.passwordConfirmationInput.setValue(password);
+    const passwordToConfirm = nonMatchingPassword
+      ? nonMatchingPassword
+      : password;
+    await this.passwordConfirmationInput.setValue(passwordToConfirm);
   }
 }
 

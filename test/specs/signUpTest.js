@@ -1,6 +1,7 @@
 const { expect } = require("chai");
 const signUpTestData = require("../data/testData");
 const signUpObjects = require("../pageObjects/signUpObjects");
+const { generateUserData } = require("../data/testDataGenerator");
 
 describe("Sign-up Test", () => {
   beforeEach(async () => {
@@ -27,6 +28,7 @@ describe("Sign-up Test", () => {
     expect(await signUpObjects.welcomeMessage.getText()).to.contain(
       "Thank you for registering with Main Website Store."
     );
+    await browser.pause(3000);
   });
 
   it("Should not allow submission with empty fields", async () => {
@@ -37,25 +39,26 @@ describe("Sign-up Test", () => {
     expect(await signUpObjects.emailFieldError).to.exist;
     expect(await signUpObjects.passwordFieldError).to.exist;
     expect(await signUpObjects.passwordConfirmationFieldError).to.exist;
+    await browser.pause(3000);
   });
-  /*
-  it("Should not allow submission with non-matching passwords", async () => {
-    const firstName = faker.name.firstName();
-    const lastName = faker.name.lastName();
-    const email = faker.internet.email();
-    const password = generatePassword();
-    const confirmPassword = password + "1";
 
-    await signUpObjects.open();
+  it("Should not allow submission with non-matching passwords", async () => {
+    const { firstName, lastName, email, password } = generateUserData();
+    const nonMatchingPassword = password + "1";
+
     await signUpObjects.signUp(
       firstName,
       lastName,
       email,
       password,
-      confirmPassword
+      nonMatchingPassword
     );
     await signUpObjects.signUpButton.click();
 
-    expect(await signUpObjects.nonMatchingPasswordsError).to.exist;
-  });*/
+    await browser.pause(3000);
+    expect(await signUpObjects.passwordMismatchError).to.exist;
+    expect(await signUpObjects.passwordMismatchError.getText()).to.contain(
+      "Please enter the same value again."
+    );
+  });
 });
