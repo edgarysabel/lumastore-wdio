@@ -21,7 +21,7 @@ describe("Sign-up Test", () => {
     );
     await signUpObjects.signUpButton.click();
 
-    expect(signUpObjects.welcomeMessage).to.exist;
+    expect(await signUpObjects.welcomeMessage).to.exist;
     expect(await signUpObjects.welcomeMessage.getText()).to.contain(
       "Thank you for registering with Main Website Store."
     );
