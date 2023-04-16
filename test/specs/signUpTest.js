@@ -1,24 +1,27 @@
-const { expect } = require("chai");
 const signUpTestData = require("../data/testData");
 const signUpObjects = require("../pageObjects/signUpObjects");
+const {
+  verifySignUpFormValues,
+  verifyWelcomeMessage,
+} = require("../../helpers/signUpHelpers");
 
 describe("Sign-up Test", () => {
   it("Should register a new user", async () => {
-    const { firstName, lastName, email, password } = signUpTestData;
-
     await signUpObjects.open();
+
+    const { firstName, lastName, email, password } = signUpTestData;
     await signUpObjects.signUp(firstName, lastName, email, password);
-    expect(await signUpObjects.firstNameInput.getValue()).to.equal(firstName);
-    expect(await signUpObjects.lastNameInput.getValue()).to.equal(lastName);
-    expect(await signUpObjects.emailInput.getValue()).to.equal(email);
-    expect(await signUpObjects.passwordInput.getValue()).to.equal(password);
-    expect(await signUpObjects.passwordConfirmationInput.getValue()).to.equal(
+
+    await verifySignUpFormValues(
+      signUpObjects,
+      firstName,
+      lastName,
+      email,
       password
     );
+
     await signUpObjects.signUpButton.click();
 
-    expect(await signUpObjects.welcomeMessage.getText()).to.contain(
-      "Thank you for registering with Main Website Store."
-    );
+    await verifyWelcomeMessage(signUpObjects);
   });
 });
