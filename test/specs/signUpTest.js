@@ -1,5 +1,5 @@
 const signUpTestData = require("../data/testData");
-const signUpObjects = require("../pageObjects/signUpObjects");
+const signUpObjects = require("../pageObjects/signUpPageObjects");
 const {
   verifySignUpFormValues,
   verifyWelcomeMessage,
