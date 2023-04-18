@@ -1,4 +1,3 @@
-require("dotenv").config();
 exports.config = {
   //
   // ====================
