@@ -28,17 +28,6 @@ class SignUpPage {
       '//div[contains(text(),"Thank you for registering with Main Website Store.")]'
     );
   }
-  async open() {
-    await browser.url("/customer/account/create/");
-  }
-
-  async signUp(firstName, lastName, email, password) {
-    await this.firstNameInput.setValue(firstName);
-    await this.lastNameInput.setValue(lastName);
-    await this.emailInput.setValue(email);
-    await this.passwordInput.setValue(password);
-    await this.passwordConfirmationInput.setValue(password);
-  }
 }
 
 module.exports = new SignUpPage();

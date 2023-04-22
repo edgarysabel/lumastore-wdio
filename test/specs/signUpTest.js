@@ -4,14 +4,14 @@ const {
   verifySignUpFormValues,
   verifyWelcomeMessage,
 } = require("../../helpers/signUpHelpers");
+const { signUp } = require("../actions/signUpActions");
+
+const { firstName, lastName, email, password } = signUpTestData;
 
 describe("Sign-up Test", () => {
   it("Should register a new user", async () => {
-    await signUpObjects.open();
-
-    const { firstName, lastName, email, password } = signUpTestData;
-    await signUpObjects.signUp(firstName, lastName, email, password);
-
+    await browser.url("/customer/account/create/");
+    await signUp(firstName, lastName, email, password);
     await verifySignUpFormValues(
       signUpObjects,
       firstName,
@@ -19,9 +19,7 @@ describe("Sign-up Test", () => {
       email,
       password
     );
-
     await signUpObjects.signUpButton.click();
-
     await verifyWelcomeMessage(signUpObjects);
   });
 });
