@@ -16,8 +16,8 @@ async function verifySignUpFormValues(
   );
 }
 
-async function verifyWelcomeMessage(signUpObjects) {
-  const welcomeMessageText = await signUpObjects.welcomeMessage.getText();
+async function verifyWelcomeMessage(dashboardObjects) {
+  const welcomeMessageText = await dashboardObjects.welcomeMessage.getText();
   expect(welcomeMessageText).to.contain(
     "Thank you for registering with Main Website Store."
   );
