@@ -1,5 +1,6 @@
 const signUpTestData = require("../data/testData");
 const signUpObjects = require("../pageObjects/signUpPageObjects");
+const dashboardObjects = require("../pageObjects/dashboardPageObjects");
 const {
   verifySignUpFormValues,
   verifyWelcomeMessage,
@@ -20,6 +21,6 @@ describe("Sign-up Test", () => {
       password
     );
     await signUpObjects.signUpButton.click();
-    await verifyWelcomeMessage(signUpObjects);
+    await verifyWelcomeMessage(dashboardObjects);
   });
 });

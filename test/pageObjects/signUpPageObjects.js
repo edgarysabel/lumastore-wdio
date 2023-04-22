@@ -22,12 +22,6 @@ class SignUpPage {
   get signUpButton() {
     return $('button[title="Create an Account"]');
   }
-
-  get welcomeMessage() {
-    return $(
-      '//div[contains(text(),"Thank you for registering with Main Website Store.")]'
-    );
-  }
 }
 
 module.exports = new SignUpPage();
