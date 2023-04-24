@@ -1,4 +1,4 @@
-const signUpPageObjects = require("../pageObjects/signUpPageObjects");
+const signUpPageObjects = require("../test/pageObjects/signUpPageObjects");
 
 async function signUp(firstName, lastName, email, password) {
   await signUpPageObjects.firstNameInput.setValue(firstName);
@@ -6,6 +6,7 @@ async function signUp(firstName, lastName, email, password) {
   await signUpPageObjects.emailInput.setValue(email);
   await signUpPageObjects.passwordInput.setValue(password);
   await signUpPageObjects.passwordConfirmationInput.setValue(password);
+  await signUpPageObjects.signUpButton.click();
 }
 
 module.exports = {

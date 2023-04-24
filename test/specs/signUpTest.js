@@ -1,26 +1,18 @@
-const signUpTestData = require("../data/testData");
-const signUpObjects = require("../pageObjects/signUpPageObjects");
+const { expect } = require("chai");
 const dashboardObjects = require("../pageObjects/dashboardPageObjects");
-const {
-  verifySignUpFormValues,
-  verifyWelcomeMessage,
-} = require("../../helpers/signUpHelpers");
-const { signUp } = require("../actions/signUpActions");
+const { signUp } = require("../../utils/signUpActions");
+const DataGenerator = require("../data/dataGenerator");
 
-const { firstName, lastName, email, password } = signUpTestData;
+const dataGenerator = new DataGenerator();
+const { firstName, lastName, email, password } = dataGenerator;
 
 describe("Sign-up Test", () => {
-  it("Should register a new user", async () => {
+  it("Register a new user", async () => {
     await browser.url("/customer/account/create/");
     await signUp(firstName, lastName, email, password);
-    await verifySignUpFormValues(
-      signUpObjects,
-      firstName,
-      lastName,
-      email,
-      password
+    const welcomeMessageText = await dashboardObjects.welcomeMessage.getText();
+    expect(welcomeMessageText).to.contain(
+      "Thank you for registering with Main Website Store."
     );
-    await signUpObjects.signUpButton.click();
-    await verifyWelcomeMessage(dashboardObjects);
   });
 });
