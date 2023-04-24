@@ -7,7 +7,7 @@ class DataGenerator {
     this.email = faker.internet.email();
     this.password = this.generatePassword();
   }
-
+  //This function makes the password more specific since the password field on the page requires at least 8 characters, including uppercase and lowercase letters, at least one special character, and at least one number.
   generatePassword() {
     const lowerCase = faker.random.alpha({ count: 1, upcase: false });
     const upperCase = faker.random.alpha({ count: 1, upcase: true });
