@@ -10,8 +10,7 @@ describe("Sign-up Test", () => {
   it("Register a new user", async () => {
     await browser.url("/customer/account/create/");
     await signUp(firstName, lastName, email, password);
-    const welcomeMessageText = await dashboardObjects.welcomeMessage.getText();
-    expect(welcomeMessageText).to.contain(
+    expect(await dashboardObjects.welcomeMessage.getText()).to.contain(
       "Thank you for registering with Main Website Store."
     );
   });
