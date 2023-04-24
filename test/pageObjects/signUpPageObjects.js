@@ -7,6 +7,10 @@ class SignUpPage {
     return $('input[name="lastname"]');
   }
 
+  get signUpForNewsletterCheckbox() {
+    return $('input[name="is_subscribed"]');
+  }
+
   get emailInput() {
     return $('input[name="email"]');
   }
