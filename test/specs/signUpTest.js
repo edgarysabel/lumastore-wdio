@@ -13,5 +13,8 @@ describe("Sign-up Test", () => {
     expect(await dashboardObjects.welcomeMessage.getText()).to.contain(
       "Thank you for registering with Main Website Store."
     );
+    expect(await dashboardObjects.userInfo.getText()).to.contain(firstName);
+    expect(await dashboardObjects.userInfo.getText()).to.contain(lastName);
+    expect(await dashboardObjects.userInfo.getText()).to.contain(email);
   });
 });
