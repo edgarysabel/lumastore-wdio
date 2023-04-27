@@ -27,5 +27,4 @@ class SignUpPage {
     return $('button[title="Create an Account"]');
   }
 }
-
 module.exports = new SignUpPage();
