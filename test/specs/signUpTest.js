@@ -1,7 +1,7 @@
 const { expect } = require("chai");
-const dashboardObjects = require("../pageObjects/dashboardPageObjects");
-const homeObjects = require("../pageObjects/homePageObjects");
-const { signUp } = require("../../utils/signUpActions");
+const dashboardPage = require("../pageObjects/dashboardPage");
+const homePage = require("../pageObjects/homePage");
+const { signUp } = require("../../utils/commonActions");
 const DataGenerator = require("../../utils/dataGenerator");
 
 const dataGenerator = new DataGenerator();
@@ -10,13 +10,13 @@ const { firstName, lastName, email, password } = dataGenerator;
 describe("Sign-up Test", () => {
   it("Register a new user", async () => {
     await browser.url("");
-    await homeObjects.createAccountLink.click();
+    await homePage.createAccountLink.click();
     await signUp(firstName, lastName, email, password);
-    expect(await dashboardObjects.welcomeMessage.getText()).to.contain(
+    expect(await dashboardPage.welcomeMessage.getText()).to.contain(
       "Thank you for registering with Main Website Store."
     );
-    expect(await dashboardObjects.userInfo.getText()).to.contain(firstName);
-    expect(await dashboardObjects.userInfo.getText()).to.contain(lastName);
-    expect(await dashboardObjects.userInfo.getText()).to.contain(email);
+    expect(await dashboardPage.userInfo.getText()).to.contain(firstName);
+    expect(await dashboardPage.userInfo.getText()).to.contain(lastName);
+    expect(await dashboardPage.userInfo.getText()).to.contain(email);
   });
 });
