@@ -1,5 +1,3 @@
-const homePage = require("../test/pageObjects/homePage");
-const menSection = require("../test/pageObjects/menSectionPage");
 const productPage = require("../test/pageObjects/productPage");
 const signUpObjects = require("../test/pageObjects/signUpPage");
 
@@ -13,12 +11,6 @@ async function signUp(firstName, lastName, email, password) {
   await signUpObjects.signUpButton.click();
 }
 
-const selectItem = async () => {
-  await homePage.menShoppingMenuItem.click();
-  await menSection.bottomsCategory.click();
-  await menSection.selectProductSolActiveShort.click();
-};
-
 const addItemToCart = async () => {
   await productPage.sizeOption32.click();
   await productPage.colorOption.click();
@@ -26,7 +18,6 @@ const addItemToCart = async () => {
 };
 
 module.exports = {
-  selectItem,
   addItemToCart,
   signUp,
 };
