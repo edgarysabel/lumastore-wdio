@@ -23,7 +23,7 @@ exports.config = {
   // will be called from there.
   //
   //run all test cases: ./test/specs/**/*.js
-  specs: ["./test/specs/searchItem.js"],
+  specs: ["./test/specs/**/*.js"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
