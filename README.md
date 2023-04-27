@@ -8,13 +8,13 @@ https://magento.softwaretestingboard.com/
 
     1. Sign up.✅
 
-    2. Logout.
+    2. Add item to shopping cart.✅
 
-    3. Search Item.
+    3. Search Item.✅
 
     4. Subscribe to newsletter.
 
-    5. Add item to shopping cart.
+    5. Logout.
 
     6. Checkout.
 

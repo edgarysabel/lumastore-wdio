@@ -3,13 +3,14 @@ const productPage = require("../pageObjects/productPage");
 const { addItemToCart } = require("../../utils/commonActions");
 const homePage = require("../../test/pageObjects/homePage");
 const menSection = require("../../test/pageObjects/menSectionPage");
+const searchResult = require("../../test/pageObjects/searchResultsPage");
 
 describe("Add an item to shopping cart Test", () => {
   it("Add item to cart", async () => {
     await browser.url("");
     await homePage.menShoppingMenuItem.click();
     await menSection.bottomsCategory.click();
-    await menSection.selectProductSolActiveShort.click();
+    await searchResult.itemResult.click();
     expect(await productPage.verifyProductSolActiveShort.getText()).to.contain(
       "Sol Active Short"
     );
