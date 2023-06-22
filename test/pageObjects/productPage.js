@@ -19,5 +19,13 @@ class ProductPage {
       '//div[contains(text(),"You added Sol Active Short to your") and .//a[text()="shopping cart"]]'
     );
   }
+
+  get cartIcon(){
+    return $("//div[@class='minicart-wrapper']");
+  }
+
+  get checkoutButton(){
+    return $("//button[@id='top-cart-btn-checkout']");
+  }
 }
 module.exports = new ProductPage();

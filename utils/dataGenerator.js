@@ -6,6 +6,12 @@ class DataGenerator {
     this.lastName = faker.name.lastName();
     this.email = faker.internet.email();
     this.password = this.generatePassword();
+    this.phoneNumber = faker.phone.phoneNumber();
+    this.city = faker.address.cityName();
+    this.street = faker.address.streetName();
+    this.zipCode = faker.address.zipCode();
+    this.countryName = "United States";
+    this.stateName = this.generateState();
   }
   /*
   This function makes the password more specific since the password 
@@ -26,6 +32,24 @@ class DataGenerator {
 
     return combinedPassword;
   }
+
+  /*This function sets a specific locale depending on the country provided, 
+  if there is not a locale corresponding to the provided country then the default locale is set to en_US*/
+  generateState() {
+    const originalLocale = faker.locale;
+
+    switch (this.countryName) {
+    case 'United States':
+      faker.setLocale('en_US');
+      break;
+    default:
+        faker.setLocale('en_US');
+    }
+    const specificState = faker.address.state();
+    faker.locale = originalLocale;
+    return specificState;
+  }
+
 }
 
 module.exports = DataGenerator;
