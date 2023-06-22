@@ -1,4 +1,4 @@
-const { signUp } = require("../../utils/commonActions");
+const { signUp, selectState } = require("../../utils/commonActions");
 const dashboardPage = require("../pageObjects/dashboardPage");
 const homePage = require("../pageObjects/homePage");
 const { expect } = require("chai");
@@ -22,7 +22,7 @@ describe("Add address to customer information test", ()=> {
         await dashboardPage.city.setValue(city);
         await dashboardPage.zipcodeBox.setValue(zipCode);
         await dashboardPage.country.click();
-        dashboardPage.selectState();
+        await selectState();
         await dashboardPage.saveAddressButton.click();
         expect(await dashboardPage.addressSavedMessage.getText()).to.contain("You saved the address.");
            

@@ -1,5 +1,5 @@
 const { addItemToCart } = require("../../utils/commonActions");
-const { signUp } = require("../../utils/commonActions");
+const { signUp, selectState } = require("../../utils/commonActions");
 const homePage = require("../pageObjects/homePage");
 const menSection = require("../../test/pageObjects/menSectionPage");
 const searchResult = require("../../test/pageObjects/searchResultsPage");
@@ -24,7 +24,7 @@ describe("Checkout after adding item to cart", () => {
         await dashboardPage.city.setValue(city);
         await dashboardPage.zipcodeBox.setValue(zipCode);
         await dashboardPage.country.click();
-        dashboardPage.selectState();
+        await selectState();
         await dashboardPage.saveAddressButton.click();
     })
 
@@ -41,6 +41,7 @@ describe("Checkout after adding item to cart", () => {
         );
         await productPage.cartIcon.click();
         await productPage.checkoutButton.click();
+        await checkoutPage.shippingMethods.click();
         await checkoutPage.nextButton.click();
         await checkoutPage.placeOrderButton.click();
         expect(await checkoutPage.checkoutConfirmation.getText()).to.contain("Thank you for your purchase!");
