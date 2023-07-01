@@ -1,38 +1,38 @@
 {
-    "name": "lumastore-wdio",
-    "version": "1.0.0",
-    "description": "WebdriverIO practice",
-    "main": "index.js",
-    "scripts": {
-        "wdio": "wdio run wdio.conf.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/edgarysabel/lumastore-wdio.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/edgarysabel/lumastore-wdio/issues"
-    },
-    "homepage": "https://github.com/edgarysabel/lumastore-wdio#readme",
-    "devDependencies": {
-        "@wdio/allure-reporter": "^8.11.0",
-        "@wdio/cli": "^8.6.7",
-        "@wdio/local-runner": "^8.6.7",
-        "@wdio/mocha-framework": "^8.6.6",
-        "@wdio/spec-reporter": "^8.6.6",
-        "allure-commandline": "^2.23.0",
-        "chromedriver": "^113.0.0",
-        "prettier": "2.8.7",
-        "ts-node": "^10.9.1",
-        "typescript": "^5.0.2",
-        "wdio-chromedriver-service": "latest"
-    },
-    "dependencies": {
-        "chai": "^4.3.7",
-        "dotenv": "^16.0.3",
-        "faker": "^5.5.3",
-        "webdriverio": "^8.6.8"
-    }
+  "name": "lumastore-wdio",
+  "version": "1.0.0",
+  "description": "WebdriverIO practice",
+  "main": "index.js",
+  "scripts": {
+    "wdio": "wdio run wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgarysabel/lumastore-wdio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edgarysabel/lumastore-wdio/issues"
+  },
+  "homepage": "https://github.com/edgarysabel/lumastore-wdio#readme",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.11.0",
+    "@wdio/cli": "^8.6.7",
+    "@wdio/local-runner": "^8.6.7",
+    "@wdio/mocha-framework": "^8.6.6",
+    "@wdio/spec-reporter": "^8.6.6",
+    "allure-commandline": "^2.23.0",
+    "chromedriver": "latest",
+    "prettier": "2.8.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2",
+    "wdio-chromedriver-service": "latest"
+  },
+  "dependencies": {
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "faker": "^5.5.3",
+    "webdriverio": "^8.6.8"
+  }
 }
