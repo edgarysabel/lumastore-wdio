@@ -1,19 +1,10 @@
-name: WebdriverIO Tests
-
-on:
-  push:
-    branches:
-      - main # Adjust this to your desired branch
-  pull_request:
-    branches:
-      - main # Adjust this to your desired branch
-
+name: Run QA Integration Tests
+on: [push, pull_request]
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v2
 
       - name: Set up Node.js
@@ -21,8 +12,14 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install Dependencies
+        run: npm install
 
-      - name: Run WebdriverIO tests
-        run: npm test
+      - name: Test
+        run: npm run wdio
+
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: logs
+          path: logs
