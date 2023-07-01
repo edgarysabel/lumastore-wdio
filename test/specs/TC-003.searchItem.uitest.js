@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 const homePage = require("../pageObjects/homePage");
-const searchResult = require("../../test/pageObjects/searchResultsPage");
+const searchResult = require("../pageObjects/searchResultsPage");
 
 describe("Search item Test", () => {
   it("Search for an item", async () => {

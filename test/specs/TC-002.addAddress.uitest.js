@@ -24,13 +24,6 @@ describe("Add address to customer information test", ()=> {
         await dashboardPage.country.click();
         await selectState();
         await dashboardPage.saveAddressButton.click();
-        expect(await dashboardPage.addressSavedMessage.getText()).to.contain("You saved the address.");
-           
+        expect(await dashboardPage.addressSavedMessage.getText()).to.contain("You saved the address.");  
     })
-
 });
-
-
-
-
-

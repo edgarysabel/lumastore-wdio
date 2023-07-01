@@ -1,8 +1,8 @@
 const { addItemToCart } = require("../../utils/commonActions");
 const { signUp, selectState } = require("../../utils/commonActions");
 const homePage = require("../pageObjects/homePage");
-const menSection = require("../../test/pageObjects/menSectionPage");
-const searchResult = require("../../test/pageObjects/searchResultsPage");
+const menSection = require("../pageObjects/menSectionPage");
+const searchResult = require("../pageObjects/searchResultsPage");
 const productPage = require("../pageObjects/productPage");
 const dashboardPage = require("../pageObjects/dashboardPage");
 const checkoutPage = require("../pageObjects/checkoutPage")

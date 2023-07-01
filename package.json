@@ -4,7 +4,6 @@
     "description": "WebdriverIO practice",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "wdio": "wdio run wdio.conf.js"
     },
     "repository": {
@@ -18,10 +17,12 @@
     },
     "homepage": "https://github.com/edgarysabel/lumastore-wdio#readme",
     "devDependencies": {
+        "@wdio/allure-reporter": "^8.11.0",
         "@wdio/cli": "^8.6.7",
         "@wdio/local-runner": "^8.6.7",
         "@wdio/mocha-framework": "^8.6.6",
         "@wdio/spec-reporter": "^8.6.6",
+        "allure-commandline": "^2.23.0",
         "chromedriver": "^113.0.0",
         "prettier": "2.8.7",
         "ts-node": "^10.9.1",
