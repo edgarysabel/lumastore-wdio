@@ -14,7 +14,7 @@ describe("Sign-up Test", () => {
     await homePage.createAccountLink.click();
     await signUp(firstName, lastName, email, password);
 
-    await dashboardPage.welcomeMessage.waitForDisplayed();
+    await dashboardPage.welcomeMessage.waitForExist();
     expect(await dashboardPage.welcomeMessage.getText()).to.contain(
       "Thank you for registering with Main Website Store."
     );
