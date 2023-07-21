@@ -23,7 +23,7 @@ exports.config = {
 
   capabilities: [
     {
-      browserName: "chromium",
+      browserName: "chrome",
       "goog:chromeOptions": {
         args: [
           "--no-sandbox",
