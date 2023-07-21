@@ -9,6 +9,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 18
+       - name: Install Chrome and ChromeDriver
+        uses: nanasess/setup-chrome@v1
+        with:
+          chrome-version: stable
+          chromedriver-version: 114.0.3
       - name: Install
         run: npm install
       - name: Test
