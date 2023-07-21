@@ -26,8 +26,7 @@ exports.config = {
       maxInstances: 1,
       browserName: "chrome",
       acceptInsecureCerts: true,
-      "goog:chromeOptions": {
-        // Set headless mode to true
+      "wdio:devtoolsOptions": {
         headless: true,
       },
     },
