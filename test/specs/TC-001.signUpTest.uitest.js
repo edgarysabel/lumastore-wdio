@@ -13,6 +13,7 @@ describe("Sign-up Test", () => {
     await browser.maximizeWindow();
     await homePage.createAccountLink.click();
     await signUp(firstName, lastName, email, password);
+    await driver.pause(5000);
     expect(await dashboardPage.welcomeMessage.getText()).to.contain(
       "Thank you for registering with Main Website Store."
     );
