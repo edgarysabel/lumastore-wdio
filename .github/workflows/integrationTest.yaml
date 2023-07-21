@@ -9,10 +9,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 18
-      
+
       - uses: browser-actions/setup-chrome@v1
-      with:
-        chrome-version: 114.0
       - run: chrome --version
 
       - name: Install Chrome and ChromeDriver
