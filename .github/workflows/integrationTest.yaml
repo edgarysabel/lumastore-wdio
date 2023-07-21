@@ -31,8 +31,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add allure-report -f
-          git add allure-results -f
+          git add testReports/allure-report -f
+          git add testReports/allure-results -f
           git commit -m "[chore] autogenerate Allure report" -a
 
       - name: Push changes
