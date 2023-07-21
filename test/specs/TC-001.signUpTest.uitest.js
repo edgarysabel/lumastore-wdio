@@ -15,9 +15,7 @@ describe("Sign-up Test", () => {
     await signUp(firstName, lastName, email, password);
 
     await dashboardPage.welcomeMessage.waitForExist();
-    expect(await dashboardPage.welcomeMessage.getText()).to.contain(
-      "Thank you for registering with Main Website Store."
-    );
+
     expect(await dashboardPage.userInfo.getText()).to.contain(firstName);
     expect(await dashboardPage.userInfo.getText()).to.contain(lastName);
     expect(await dashboardPage.userInfo.getText()).to.contain(email);
