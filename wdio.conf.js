@@ -25,7 +25,7 @@ exports.config = {
     {
       browserName: "chrome",
       "goog:chromeOptions": {
-        args: ["--headless", "--window-size=1920,1080"],
+        args: ["--headless"],
       },
     },
   ],
