@@ -24,8 +24,13 @@ exports.config = {
   capabilities: [
     {
       browserName: "chromium",
-      "wdio:devtoolsOptions": {
-        headless: true,
+      "goog:chromeOptions": {
+        args: [
+          "--no-sandbox",
+          "--disable-dev-shm-usage",
+          "--remote-debugging-port=9222",
+          "--headless",
+        ],
       },
     },
   ],
