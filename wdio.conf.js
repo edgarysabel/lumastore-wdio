@@ -26,9 +26,6 @@ exports.config = {
       maxInstances: 1,
       browserName: "chrome",
       acceptInsecureCerts: true,
-      "wdio:devtoolsOptions": {
-        headless: true,
-      },
     },
   ],
   //
