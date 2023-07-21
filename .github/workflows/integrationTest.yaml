@@ -37,7 +37,7 @@ jobs:
 
       - name: Push changes
         if: always()
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@report
         with:
           github_token: "${{ secrets.GITHUB_TOKEN }}"
           force: true
