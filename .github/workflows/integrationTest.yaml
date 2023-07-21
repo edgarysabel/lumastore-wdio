@@ -9,7 +9,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 18
-       - name: Install Chrome and ChromeDriver
+      - name: Install Chrome and ChromeDriver
         uses: nanasess/setup-chrome@v1
         with:
           chrome-version: stable
