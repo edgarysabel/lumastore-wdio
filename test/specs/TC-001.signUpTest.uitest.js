@@ -10,6 +10,7 @@ const { firstName, lastName, email, password } = dataGenerator;
 describe("Sign-up Test", () => {
   it("Register a new user", async () => {
     await browser.url("");
+    await browser.maximizeWindow();
     await homePage.createAccountLink.click();
     await signUp(firstName, lastName, email, password);
     expect(await dashboardPage.welcomeMessage.getText()).to.contain(
