@@ -25,12 +25,7 @@ exports.config = {
     {
       browserName: "chrome",
       "goog:chromeOptions": {
-        args: [
-          "--no-sandbox",
-          "--disable-dev-shm-usage",
-          "--remote-debugging-port=9222",
-          "--headless",
-        ],
+        args: ["--headless"],
       },
     },
   ],
