@@ -10,7 +10,7 @@ jobs:
         with:
           node-version: 18
       - name: Install Chrome and ChromeDriver
-      - uses: actions/checkout@v2
+      # - uses: actions/checkout@v2
       - uses: nanasess/setup-chrome@v2
         with:
           chrome-version: stable
