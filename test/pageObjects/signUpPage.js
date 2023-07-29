@@ -1,30 +1,26 @@
 class SignUpPage {
   get firstNameInput() {
-    return $('input[name="firstname"]');
+    return $('//*[@id="firstname"]');
   }
 
   get lastNameInput() {
-    return $('input[name="lastname"]');
+    return $('//*[@id="lastname"]');
   }
 
-  get signUpForNewsletterCheckbox() {
-    return $('input[name="is_subscribed"]');
+  get signUpEmailInput() {
+    return $('//*[@id="email_address"]');
   }
 
-  get emailInput() {
-    return $('input[name="email"]');
-  }
-
-  get passwordInput() {
-    return $('input[name="password"]');
+  get signUpPasswordInput() {
+    return $('//*[@id="password"]');
   }
 
   get passwordConfirmationInput() {
-    return $('input[name="password_confirmation"]');
+    return $('//*[@id="password-confirmation"]');
   }
 
   get signUpButton() {
-    return $('button[title="Create an Account"]');
+    return $('//button[@*="Create an Account"]//span');
   }
 }
 module.exports = new SignUpPage();

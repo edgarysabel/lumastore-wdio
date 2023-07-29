@@ -14,8 +14,8 @@ exports.config = {
   // ==================
   // Specify Test Files
   // ==================
-
-  specs: ["./test/specs/TC-001.**"],
+  //./test/specs/TC-001.**
+  specs: ["./test/specs/TC-004.addItemToCart.uitest.js"],
   //
   // ============
   // Capabilities
@@ -27,7 +27,7 @@ exports.config = {
     {
       browserName: "chrome",
       "goog:chromeOptions": {
-        args: ["--headless"],
+        //args: ["--headless"],
       },
     },
   ],

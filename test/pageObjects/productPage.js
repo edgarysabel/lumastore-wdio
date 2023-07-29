@@ -1,12 +1,14 @@
+const testItem = require("../../utils/data/testItem");
+
 class ProductPage {
-  get verifyProductSolActiveShort() {
-    return $('//span[contains(text(),"Sol Active Short")]');
+  get selectedItemName() {
+    return $(`//*[contains(text(),"${testItem.item}")]`);
   }
-  get sizeOption32() {
+  get itemSize() {
     return $('//div[@id="option-label-size-143-item-175"]');
   }
 
-  get colorOption() {
+  get itemColor() {
     return $('//*[@id="option-label-color-93-item-50"]');
   }
 
@@ -16,15 +18,15 @@ class ProductPage {
 
   get productAddedConfirmation() {
     return $(
-      '//div[contains(text(),"You added Sol Active Short to your") and .//a[text()="shopping cart"]]'
+      `//*[contains(text(),"You added ${testItem.item} to your") and .//a[text()="shopping cart"]]`
     );
   }
 
-  get cartIcon(){
+  get cartIcon() {
     return $("//div[@class='minicart-wrapper']");
   }
 
-  get checkoutButton(){
+  get checkoutButton() {
     return $("//button[@id='top-cart-btn-checkout']");
   }
 }

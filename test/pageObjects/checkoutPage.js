@@ -1,22 +1,19 @@
-class checkoutPage{
-
-get nextButton() {
+class CheckoutPage {
+  get nextButton() {
     return $("//button/span[contains(text(),'Next')]");
-}
+  }
 
-get shippingMethods(){
+  get shippingMethods() {
     return $("//*[@value='flatrate_flatrate']");
-}
+  }
 
-
-get placeOrderButton() {
+  get placeOrderButton() {
     return $("//button/span[contains(text(),'Place Order')]");
-}
+  }
 
-get checkoutConfirmation(){
+  get checkoutConfirmation() {
     return $("//h1/span[contains(text(),'Thank you for your purchase!')]");
+  }
 }
 
-}
-
-module.exports = new checkoutPage;
+module.exports = new CheckoutPage();

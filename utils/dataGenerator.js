@@ -39,17 +39,16 @@ class DataGenerator {
     const originalLocale = faker.locale;
 
     switch (this.countryName) {
-    case 'United States':
-      faker.setLocale('en_US');
-      break;
-    default:
-        faker.setLocale('en_US');
+      case "United States":
+        faker.setLocale("en_US");
+        break;
+      default:
+        faker.setLocale("en_US");
     }
     const specificState = faker.address.state();
     faker.locale = originalLocale;
     return specificState;
   }
-
 }
 
 module.exports = DataGenerator;
