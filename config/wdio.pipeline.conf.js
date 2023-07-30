@@ -12,7 +12,7 @@ const { config } = require("./wdio.shared.conf");
   // Specify Test Files
   // ==================
 
-  (config.specs = ["../test/specs/TC-003.**"]),
+  (config.specs = ["../test/specs/**.**"]),
   //
   // ============
   // Capabilities
