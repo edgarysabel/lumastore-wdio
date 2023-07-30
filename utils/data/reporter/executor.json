@@ -1,0 +1,5 @@
+{
+  "name": "Integration Tests",
+  "buildName": "Workflows",
+  "buildUrl": "https://github.com/edgarysabel/lumastore-wdio/actions"
+}

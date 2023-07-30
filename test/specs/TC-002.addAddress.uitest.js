@@ -5,25 +5,34 @@ const { expect } = require("chai");
 const DataGenerator = require("../../utils/dataGenerator");
 
 const dataGenerator = new DataGenerator();
-const { firstName, lastName, email, password, city, street, zipCode, phoneNumber} = dataGenerator;
+const {
+  firstName,
+  lastName,
+  email,
+  password,
+  city,
+  street,
+  zipCode,
+  phoneNumber,
+} = dataGenerator;
 
-describe("Add address to customer information test", ()=> {
-    
-    beforeEach(async () => {
-        browser.url("");
-        await homePage.createAccountLink.click();
-        await signUp(firstName, lastName, email, password);
-    })
-    
-    it("Add address", async () => {
-        await dashboardPage.addressBook.click();
-        await dashboardPage.telephone.setValue(phoneNumber);
-        await dashboardPage.streetAddress.setValue(street);
-        await dashboardPage.city.setValue(city);
-        await dashboardPage.zipcodeBox.setValue(zipCode);
-        await dashboardPage.country.click();
-        await selectState();
-        await dashboardPage.saveAddressButton.click();
-        expect(await dashboardPage.addressSavedMessage.getText()).to.contain("You saved the address.");  
-    })
+describe("Add address to customer information test", () => {
+  beforeEach(async () => {
+    await homePage.createAccountLink.click();
+    await signUp(firstName, lastName, email, password);
+  });
+
+  it("Add address", async () => {
+    await dashboardPage.addressBook.click();
+    await dashboardPage.telephone.setValue(phoneNumber);
+    await dashboardPage.streetAddress.setValue(street);
+    await dashboardPage.city.setValue(city);
+    await dashboardPage.zipcodeBox.setValue(zipCode);
+    await dashboardPage.country.click();
+    await selectState();
+    await dashboardPage.saveAddressButton.click();
+    expect(await dashboardPage.addressSavedMessage.getText()).to.contain(
+      "You saved the address."
+    );
+  });
 });

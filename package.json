@@ -4,7 +4,8 @@
   "description": "WebdriverIO practice",
   "main": "index.js",
   "scripts": {
-    "wdio": "wdio run wdio.conf.js"
+    "wdio:local": "wdio run config/wdio.local.conf.js",
+    "wdio:pipeline": "wdio run config/wdio.pipeline.conf.js"
   },
   "repository": {
     "type": "git",
