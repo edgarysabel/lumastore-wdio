@@ -15,6 +15,11 @@ jobs:
 
       - name: Test
         run: npm run wdio:pipeline
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: logs
+          path: logs
 
       - name: Get Test Results history
         uses: actions/checkout@v3
@@ -30,7 +35,7 @@ jobs:
         id: allure-report
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          WORKFLOW_ID: main.yml
+          WORKFLOW_ID: integrationTest.yaml
           allure_results: allure-results
           gh_pages: gh-pages
           allure_report: allure-report
