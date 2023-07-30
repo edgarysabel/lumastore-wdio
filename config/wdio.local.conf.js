@@ -23,6 +23,8 @@ const { config } = require("./wdio.shared.conf");
     {
       browserName: "chrome",
     },
-  ]);
-
-exports.config = config;
+  ]),
+  (config.before = function (capabilities, specs) {
+    browser.setWindowSize(1920, 1080); // Set the window size to 1920x1080
+  }),
+  (exports.config = config);

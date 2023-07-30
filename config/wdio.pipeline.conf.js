@@ -19,6 +19,7 @@ const { config } = require("./wdio.shared.conf");
   // ============
 
   (config.maxInstances = 1),
+  (config.maxRetries = 2),
   (config.capabilities = [
     {
       browserName: "chrome",
