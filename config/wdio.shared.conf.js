@@ -18,7 +18,7 @@ exports.config = {
   connectionRetryTimeout: 120000,
   //
   // Default request retries count
-  connectionRetryCount: 3,
+  connectionRetryCount: 10,
   //
   // Test runner services
   services: ["chromedriver"],
