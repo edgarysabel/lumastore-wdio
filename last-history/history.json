@@ -1,1 +1,1 @@
-{}
+{"9cbcf7e0cbf6ce1d5064663363cbda2b":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"9d8cca29731e47ec","reportUrl":"https://edgarysabel.github.io/lumastore-wdio/62//#testresult/9d8cca29731e47ec","status":"passed","time":{"start":1690695910884,"stop":1690695913070,"duration":2186}}]}}
