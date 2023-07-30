@@ -6,17 +6,11 @@ const dataGenerator = new DataGenerator();
 const { countryName, stateName } = dataGenerator;
 
 async function signUp(firstName, lastName, email, password) {
-  await forceScrollIntoView(signUpObjects.firstNameInput);
   await signUpObjects.firstNameInput.setValue(firstName);
-  await forceScrollIntoView(signUpObjects.lastNameInput);
   await signUpObjects.lastNameInput.setValue(lastName);
-  await forceScrollIntoView(signUpObjects.emailInput);
   await signUpObjects.emailInput.setValue(email);
-  await forceScrollIntoView(signUpObjects.passwordInput);
   await signUpObjects.passwordInput.setValue(password);
-  await forceScrollIntoView(signUpObjects.passwordConfirmationInput);
   await signUpObjects.passwordConfirmationInput.setValue(password);
-  await forceScrollIntoView(signUpObjects.signUpButton);
   await signUpObjects.signUpButton.click();
 }
 
