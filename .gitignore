@@ -105,4 +105,4 @@ dist
 
 # Reporter
 allure-report
-/testReports
+allure-results
