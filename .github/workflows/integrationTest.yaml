@@ -29,12 +29,12 @@ jobs:
           git add testReports/allure-report -f
           git add testReports/allure-results -f
           git commit -m "[chore] autogenerate Allure report" -a
-      - name: Push changes
-        if: always()
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: "${{ secrets.GITHUB_TOKEN }}"
-          force: true
+      # - name: Push changes
+      #   if: always()
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: "${{ secrets.GITHUB_TOKEN }}"
+      #     force: true
 
       # - name: Commit and push changes
       #   run: |
