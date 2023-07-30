@@ -4,7 +4,7 @@ on:
     branches:
       - report
 jobs:
-  build:
+  push_to_branch:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
