@@ -13,6 +13,10 @@ class DashboardPage {
     return $('//div[@class="box box-information"]//p');
   }
 
+  get myAccountMenuDropdown() {
+    return $("//*[@class='title block-collapsible-nav-title']");
+  }
+
   get addressBook() {
     return $("(//*[@id='block-collapsible-nav']/ul/li)[6]");
   }
