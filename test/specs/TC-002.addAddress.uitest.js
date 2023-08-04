@@ -18,6 +18,7 @@ const {
 
 describe("Add address to customer information test", () => {
   beforeEach(async () => {
+    await browser.url("");
     await homePage.createAccountLink.click();
     await signUp(firstName, lastName, email, password);
   });
