@@ -3,7 +3,7 @@ const allure = require("allure-commandline");
 exports.config = {
   beforeEach: async function () {
     await browser.url("");
-  },
+  }, //
   // ===================
   // Test Configurations
   // ===================
