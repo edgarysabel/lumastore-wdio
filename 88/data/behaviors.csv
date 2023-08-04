@@ -1,0 +1,6 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","Sign-up Test","","0","1","0","0","0"
+"","Add an item to shopping cart Test","","0","1","0","0","0"
+"","Add address to customer information test","","0","1","0","0","0"
+"","Search item Test","","0","0","1","0","0"
+"","Checkout after adding item to cart","","0","1","0","0","0"
