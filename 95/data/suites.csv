@@ -1,6 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Sun Aug 06 05:35:28 GMT 2023","Sun Aug 06 05:35:28 GMT 2023","1","","Add address to customer information test","","","","Add address",""
-"broken","Sun Aug 06 05:35:31 GMT 2023","Sun Aug 06 05:36:31 GMT 2023","60007","","Sign-up Test","","","","Register a new user",""
-"broken","Sun Aug 06 05:31:55 GMT 2023","Sun Aug 06 05:32:55 GMT 2023","60006","","Checkout after adding item to cart","","","","""before each"" hook for Checkout after adding item to cart",""
-"broken","Sun Aug 06 05:32:57 GMT 2023","Sun Aug 06 05:33:57 GMT 2023","60006","","Add an item to shopping cart Test","","","","Add item to cart",""
-"passed","Sun Aug 06 05:33:59 GMT 2023","Sun Aug 06 05:34:10 GMT 2023","11757","","Search item Test","","","","Search for an item",""
