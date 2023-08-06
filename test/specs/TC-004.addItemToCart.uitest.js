@@ -1,9 +1,9 @@
 const { expect } = require("chai");
 const productPage = require("../pageObjects/productPage");
 const { addItemToCart } = require("../../utils/commonActions");
-const homePage = require("../../test/pageObjects/homePage");
-const menSection = require("../../test/pageObjects/menSectionPage");
-const searchResult = require("../../test/pageObjects/searchResultsPage");
+const homePage = require("../pageObjects/homePage");
+const menSection = require("../pageObjects/menSectionPage");
+const searchResult = require("../pageObjects/searchResultsPage");
 
 describe("Add an item to shopping cart Test", () => {
   it("Add item to cart", async () => {
