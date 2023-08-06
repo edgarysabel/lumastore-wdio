@@ -22,6 +22,7 @@ const {
 
 describe("Checkout after adding item to cart", () => {
   beforeEach(async () => {
+    await browser.url("");
     await homePage.createAccountLink.click();
     await signUp(firstName, lastName, email, password);
     await dashboardPage.addressBook.click();

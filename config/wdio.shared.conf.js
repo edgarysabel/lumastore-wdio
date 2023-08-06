@@ -1,7 +1,9 @@
 const allure = require("allure-commandline");
 
 exports.config = {
-  //
+  beforeEach: async function () {
+    await browser.url("");
+  }, //
   // ===================
   // Test Configurations
   // ===================
@@ -73,7 +75,6 @@ exports.config = {
   ) {
     await browser.takeScreenshot();
   },
-
   before: async function () {
     await browser.url("");
     await browser.maximizeWindow();

@@ -7,6 +7,7 @@ const searchResult = require("../pageObjects/searchResultsPage");
 
 describe("Add an item to shopping cart Test", () => {
   it("Add item to cart", async () => {
+    await browser.url("");
     await homePage.menShoppingMenuItem.click();
     await menSection.bottomsCategory.click();
     await searchResult.itemResult.click();

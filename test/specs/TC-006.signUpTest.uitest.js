@@ -18,8 +18,8 @@ describe("Sign-up Test", () => {
 
     await dashboardPage.welcomeMessage.waitForExist();
 
-    // expect(await dashboardPage.userInfo.getText()).to.contain(firstName);
-    // expect(await dashboardPage.userInfo.getText()).to.contain(lastName);
-    // expect(await dashboardPage.userInfo.getText()).to.contain(email);
+    expect(await dashboardPage.userInfo.getText()).to.contain(firstName);
+    expect(await dashboardPage.userInfo.getText()).to.contain(lastName);
+    expect(await dashboardPage.userInfo.getText()).to.contain(email);
   });
 });
