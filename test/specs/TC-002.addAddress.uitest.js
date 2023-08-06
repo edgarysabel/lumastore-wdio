@@ -24,8 +24,9 @@ describe("Add address to customer information test", () => {
   });
 
   it("Add address", async () => {
-    await dashboardPage.myAccountMenuDropdown.click(); //hello
-    await dashboardPage.addressBook.scrollIntoView();
+    // await dashboardPage.myAccountMenuDropdown.click(); //hello
+    // await dashboardPage.addressBook.scrollIntoView();
+    await browser.takeScreenshot();
     await dashboardPage.addressBook.click();
     await dashboardPage.telephone.setValue(phoneNumber);
     await dashboardPage.streetAddress.setValue(street);

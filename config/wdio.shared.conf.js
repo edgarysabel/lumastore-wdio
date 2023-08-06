@@ -75,6 +75,9 @@ exports.config = {
   ) {
     await browser.takeScreenshot();
   },
+  afterCommand: async function (commandName, args, result, error) {
+    await browser.takeScreenshot();
+  },
 
   before: async function () {
     await browser.url("");
