@@ -57,5 +57,12 @@ class DashboardPage {
       "//div[@class='messages']//div[contains(text(),'You saved the address.')]"
     );
   }
+  get userOptionsMenu() {
+    return $("(//button[@type='button'])[1]");
+  }
+
+  get myAccountOption() {
+    return $("(//a[normalize-space()='My Account'])[1]");
+  }
 }
 module.exports = new DashboardPage();

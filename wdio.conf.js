@@ -15,7 +15,7 @@ exports.config = {
   // Specify Test Files
   // ==================
   //./test/specs/TC-001.**
-  specs: ["./test/specs/TC-004.addItemToCart.uitest.js"],
+  specs: ["./test/specs/TC-002.**"],
   //
   // ============
   // Capabilities

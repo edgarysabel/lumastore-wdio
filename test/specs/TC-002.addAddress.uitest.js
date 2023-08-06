@@ -24,11 +24,13 @@ const {
 describe("Add address to customer information test", () => {
   beforeEach(async () => {
     await goToUrl();
-    await homePage.createAccountLink.click();
-    await signUp(firstName, lastName, email, password);
+    await homePage.signInLink.click();
+    await login();
   });
 
   it("Add address", async () => {
+    await dashboardPage.userOptionsMenu.click();
+    await dashboardPage.myAccountOption.click();
     await dashboardPage.addressBook.click();
     await dashboardPage.telephone.setValue(phoneNumber);
     await dashboardPage.streetAddress.setValue(street);
