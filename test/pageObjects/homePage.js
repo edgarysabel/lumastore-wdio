@@ -12,5 +12,9 @@ class HomePage {
   get searchBar() {
     return $("//input[@id='search']");
   }
+
+  get signInLink() {
+    return $("=Sign In");
+  }
 }
 module.exports = new HomePage();

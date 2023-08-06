@@ -12,7 +12,7 @@ const { config } = require("./wdio.shared.conf");
   // Specify Test Files
   // ==================
   //../test/specs/TC-002.addAddress.uitest.js
-  (config.specs = ["../test/specs/TC-002.**"]),
+  (config.specs = ["../test/specs/TC-001.**"]),
   //
   // ============
   // Capabilities

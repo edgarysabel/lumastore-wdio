@@ -1,9 +1,21 @@
 const productPage = require("../test/pageObjects/productPage");
 const signUpObjects = require("../test/pageObjects/signUpPage");
 const DataGenerator = require("./dataGenerator");
-
+const loginPage = require("../test/pageObjects/loginPage");
+const loginData = require("./data/loginData");
 const dataGenerator = new DataGenerator();
 const { countryName, stateName } = dataGenerator;
+
+async function login() {
+  await loginPage.loginEmailInput.setValue(loginData.email);
+  await loginPage.loginPasswordInput.setValue(loginData.password);
+  await loginPage.loginBtn.click();
+  await browser.pause(5000);
+  /*
+  await expect(dashboardPage.loginWelcomeMessage.getText()).to.contain(
+    `Welcome, ${loginData.user_name} ${loginData.user_lastname}!`
+  );*/
+}
 
 async function signUp(firstName, lastName, email, password) {
   await signUpObjects.firstNameInput.setValue(firstName);
@@ -45,9 +57,16 @@ async function forceScrollIntoView(element) {
   });
 }
 
+async function goToUrl() {
+  await browser.url("");
+  await browser.maximizeWindow();
+}
+
 module.exports = {
   addItemToCart,
   signUp,
+  login,
+  goToUrl,
   selectState,
   forceScrollIntoView,
 };
