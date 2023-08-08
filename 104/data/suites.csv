@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Aug 07 16:58:21 GMT 2023","Mon Aug 07 16:58:29 GMT 2023","8395","","Login Test","","","","Login successful",""
+"passed","Tue Aug 08 02:00:52 GMT 2023","Tue Aug 08 02:01:01 GMT 2023","8318","","Login Test","","","","Login successful",""
